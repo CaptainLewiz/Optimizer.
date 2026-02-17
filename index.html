@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ULTRA OPTIMIZER | Level Up</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body { background-color: #050505; color: #e5e5e5; font-family: 'Inter', sans-serif; }
+        .neon-text { font-family: 'Orbitron', sans-serif; color: #00f2ff; text-shadow: 0 0 10px #00f2ff; }
+        .game-card { background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(0, 242, 255, 0.1); transition: 0.3s; }
+        .game-card:hover { border-color: #7000ff; box-shadow: 0 0 20px rgba(112, 0, 255, 0.3); }
+        .active-tab { border-bottom: 3px solid #00f2ff; color: #00f2ff; }
+    </style>
+</head>
+<body class="p-10">
+    <nav class="flex justify-between items-center mb-20">
+        <h1 class="neon-text text-3xl italic">ULTRA_OPT</h1>
+        <div class="space-x-6 text-sm uppercase tracking-widest">
+            <a href="#" class="hover:text-cyan-400">Home</a>
+            <a href="#" class="hover:text-cyan-400">Pro Tools</a>
+            <a href="#" class="hover:text-cyan-400">Discord</a>
+        </div>
+    </nav>
+
+    <div class="max-w-6xl mx-auto text-center">
+        <h2 class="text-6xl font-black mb-4">STOP THE <span class="text-purple-500">LAG.</span></h2>
+        <p class="text-gray-500 text-xl mb-12">One-click kernel optimizations for low-end legends.</p>
+
+        <div class="flex justify-center space-x-12 mb-10 border-b border-gray-800 pb-2">
+            <button onclick="showGame('fortnite')" class="tab-btn active-tab font-bold pb-2">FORTNITE</button>
+            <button onclick="showGame('minecraft')" class="tab-btn font-bold pb-2">MINECRAFT</button>
+            <button onclick="showGame('roblox')" class="tab-btn font-bold pb-2">ROBLOX</button>
+        </div>
+
+        <div id="game-display" class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center text-left">
+            <img id="game-img" src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=800&q=80" class="rounded-2xl shadow-2xl border-4 border-gray-900">
+            <div>
+                <h3 id="game-title" class="text-4xl font-bold mb-4">FORTNITE MODE</h3>
+                <p id="game-desc" class="text-gray-400 mb-6">Optimizes Unreal Engine cache, reduces building delay, and spoofs VRAM for smoother FPS during end-games.</p>
+                <div class="flex space-x-4">
+                    <a href="Master_Optimizer.bat" download class="bg-cyan-500 text-black font-bold px-8 py-4 rounded-full hover:bg-white transition">DOWNLOAD SCRIPT</a>
+                    <a href="AFFILIATE_LINK" class="bg-transparent border border-gray-600 px-8 py-4 rounded-full hover:bg-gray-800">GET HONE.GG (AD)</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showGame(game) {
+            const title = document.getElementById('game-title');
+            const desc = document.getElementById('game-desc');
+            const img = document.getElementById('game-img');
+            
+            if(game === 'fortnite') {
+                title.innerText = "FORTNITE MODE";
+                desc.innerText = "Fixes DX11/DX12 shader stutter and reduces input lag for competitive play.";
+                img.src = "https://images.unsplash.com/photo-1589241062272-c0a000072dfa?auto=format&fit=crop&w=800&q=80";
+            } else if(game === 'minecraft') {
+                title.innerText = "MINECRAFT MODE";
+                desc.innerText = "Allocates garbage collection and fixes Java heap memory spills for 8GB RAM setups.";
+                img.src = "https://images.unsplash.com/photo-1627398242454-45a1465c2479?auto=format&fit=crop&w=800&q=80";
+            } else if(game === 'roblox') {
+                title.innerText = "ROBLOX MODE";
+                desc.innerText = "Unlocks FPS cap and clears local texture cache to stop random freezes.";
+                img.src = "https://images.unsplash.com/photo-1605898835518-249051877484?auto=format&fit=crop&w=800&q=80";
+            }
+        }
+    </script>
+</body>
+</html>
